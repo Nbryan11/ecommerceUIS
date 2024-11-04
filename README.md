@@ -11,7 +11,7 @@
  - Java
  ## Frontend
  - Javascript 
- - React<
+ - React
 > This fronted is a free file provided by https://telusko.com/ and changed by us.
 
 
