@@ -1,6 +1,6 @@
 # Welcome to Dricamp!
 
-**Dricamp** is an E-comerce focused on selling Colombian fruits.  You could watch all the features entering in the Spring file. It has a basic CRUD for create fruits, update fruits, delete fruits and get de fruits in the index page.
+**Dricamp** is an E-comerce focused on selling Colombian fruits.  You could watch all the features entering in the Spring file. It has a basic CRUD for create, update,delete and get fruits in the index page.
 
 
 
