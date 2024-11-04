@@ -13,3 +13,12 @@
  - Javascript 
  - React<
 > This fronted is a free file provided by https://telusko.com/ and changed by us.
+
+
+# Open the project
+
+You can backend of the project on the carpet name's  [practicaSpring], and the fronted from react with [ecom-frontend-4-main].
+
+>The commands for execute the frontend is 
+> 1. npm i
+> 2. npm run dev
