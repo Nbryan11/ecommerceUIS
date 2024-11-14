@@ -16,7 +16,16 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
   const [noResults, setNoResults] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   const [showSearchResults,setShowSearchResults] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false); // Estado para verificar si es admin
+
   useEffect(() => {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      const parsedUserData = JSON.parse(userData);
+      if (parsedUserData.role === "ADMIN") {
+        setIsAdmin(true);
+      }
+    }
     fetchData();
   }, []);
 
@@ -132,6 +141,12 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
                   </ul>
                 </li>
 
+                {isAdmin && (
+                <a href="/admin" className="nav-link text-dark">
+                  <i className="bi bi-shield-lock-fill"></i> Admin
+                </a>
+              )}
+
                 <li className="nav-item"></li>
               </ul>
               <button className="theme-btn" onClick={() => toggleTheme()}>
@@ -148,6 +163,15 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
                     style={{ display: "flex", alignItems: "center" }}
                   >
                    Carrito
+                  </i>
+                </a>
+
+                <a href="/signin" className="nav-link text-dark">
+                  <i
+                    className="bi bi-person-circle"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                   
                   </i>
                 </a>
                 {/* <form className="d-flex" role="search" onSubmit={handleSearch} id="searchForm"> */}

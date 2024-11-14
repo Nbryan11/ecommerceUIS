@@ -1,9 +1,10 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Children } from "react";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import AddProduct from "./components/AddProduct";
+import SignIn from "./components/SignIn";
 import Product from "./components/Product";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppProvider } from "./Context/Context";
@@ -11,6 +12,9 @@ import UpdateProduct from "./components/UpdateProduct";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AdminPanel from "./components/AdminPanel";
+import Ventas from "./components/Ventas";
+import Usuarios from "./components/Usuarios";
 
 
 function App() {
@@ -54,6 +58,15 @@ function App() {
           <Route path="product/:id" element={<Product  />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/update/:id" element={<UpdateProduct />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/admin" element={<AdminPanel />}>
+              <Route path="ventas" element={<Ventas />} />
+              <Route path="usuarios" element={<Usuarios />} />
+              <Route path="ventassss" element={<AdminPanel />} />
+          </Route>
+
+
+
         </Routes>
       </BrowserRouter>
     </AppProvider>

@@ -76,7 +76,7 @@ const Home = ({ selectedCategory }) => {
             const cardStyle = {
               width: "18rem",
               height: "12rem",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 2px 3px",
+              boxShadow: "rgba(0, 0, 0, 0.9) 0px 15px 3px",
               backgroundColor: available ? "#fff" : "#ccc",
             };
             return (
@@ -104,7 +104,7 @@ const Home = ({ selectedCategory }) => {
                       width: "100%",
                       height: "180px",
                       objectFit: "cover",
-                      padding: "5px",
+                      padding: "2 px",
                       margin: "0",
                     }}
                   />
